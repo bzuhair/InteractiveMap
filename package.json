@@ -1,19 +1,27 @@
 {
   "name": "InteractiveMap",
   "version": "1.0.0",
-  "description": "Interactive Map ---",
+  "description": "Interactive Map",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "webpack",
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^3.8.1"
+    "webpack": "^3.8.1",
+    "webpack-dev-middleware": "^1.12.0"
   }
 }
