@@ -1,5 +1,11 @@
 import React from 'react';
+import Map from './Map.jsx';
 
-const App = () => <div>Hello World</div>;
+class App extends React.Component {
+
+  render() {
+    return <Map />;
+  }
+}
 
 export default App;
