@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
+    "google-maps-react": "^1.1.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "rimraf": "^2.6.2"
