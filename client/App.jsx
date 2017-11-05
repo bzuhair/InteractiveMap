@@ -1,11 +1,12 @@
 import React from 'react';
 import Map from './Map.jsx';
+import Analytics from './Analytics.jsx';
 
-class App extends React.Component {
-
-  render() {
-    return <Map />;
-  }
-}
+const App = () => (
+  <div>
+    <Map />
+    <Analytics />
+  </div>
+);
 
 export default App;
