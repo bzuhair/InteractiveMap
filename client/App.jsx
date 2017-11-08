@@ -1,10 +1,11 @@
 import React from 'react';
-import Container from './Container.jsx';
 import Analytics from './Analytics.jsx';
+import Map from './Map.jsx';
+
 
 const App = () => (
   <div>
-    <Container />
+    <Map />
     <Analytics />
   </div>
 );
