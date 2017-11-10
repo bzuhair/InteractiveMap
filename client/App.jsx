@@ -3,11 +3,20 @@ import Analytics from './Analytics.jsx';
 import Map from './Map.jsx';
 
 
-const App = () => (
-  <div>
-    <Map />
-    <Analytics />
-  </div>
-);
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div>
+        <Map />
+        <Analytics />
+      </div>
+    );
+  }
+}
 
 export default App;
