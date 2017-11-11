@@ -8,12 +8,13 @@ const VENDOR_LIBS = [
 
 module.exports = {
   entry: {
-    bundle: './client',
+    bundle: ['./client', 'webpack-hot-middleware/client'],
     vendor: VENDOR_LIBS,
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -31,5 +32,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'client/index.html',
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 };
