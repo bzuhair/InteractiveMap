@@ -14,10 +14,9 @@ class App extends React.Component {
     axios.get('/trips')
       .then((response) => {
         const trips = response.data;
-        console.log(response)
         this.setState({ trips });
       })
-      .catch(error => console.log('Your a failure', error));
+      .catch(error => console.log('Failed to grab data', error));
   }
 
   render() {
