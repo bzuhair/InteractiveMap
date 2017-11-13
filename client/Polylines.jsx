@@ -2,30 +2,19 @@ import React from 'react';
 import { Polyline } from 'react-google-maps';
 
 
-class Polylines extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Polylines = (props) => {
+  const polylines = Object.values(props.trips).map((trip) => {
+    const coordinates = trip.coords.map(coords => (
+      { lat: coords.lat, lng: coords.lng }
+    ));
+    return <Polyline key={trip.start_time} path={coordinates} />;
+  });
 
-  componentWillMount() {
-    const trips = this.props.trips;
-    this.setState({ trips });
-    console.log(this.props)
-  }
-  render() {
-    // console.log(this)
-    // const trips = this.props.trips;
-    // const key = Object.keys(trips);
-    // console.log(key)
-    return (
-      <div>
-        <Polyline
-          // path={this.props.coordinates}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      {polylines}
+    </div>
+  );
+};
 
 export default Polylines;
